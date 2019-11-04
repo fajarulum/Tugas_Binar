@@ -1,0 +1,46 @@
+.judul{
+	margin: 50px 100px 0px 100px;
+	background: #B0E0E6;
+	padding: 10px;
+	padding-left: 430px;
+	font-family: cursive, sans-serif;
+	
+	
+}
+.satu{ margin: 2px 100px 50px 100px;
+	background: #E0FFFF;
+	border-style: groove;
+	padding-left: 10px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+
+}
+
+.tiga input{
+	width: 95%;
+	padding: 12px 20px;
+  	margin: 8px 0;
+  	box-sizing: border-box;
+
+}
+.empat input{
+	width: 95%;
+	padding: 12px 20px;
+  	margin: 8px 0;
+  	box-sizing: border-box;
+	
+
+
+}
+.lima{
+	width: 100%;
+
+}
+.drov{
+	padding: 10px;
+
+}
+.simpan{
+	padding: 10px;
+	margin-left: 10px;
+}
