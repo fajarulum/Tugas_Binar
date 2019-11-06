@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Data</title>
+</head>
+<body>
+	
+<form>
+	<p id="notif"></p>
+	<label for="nama" id="labelNama"> Nama :</label>
+	<input width="10" id="nama" maxlength="15" onclick="myFunction()"></input><br><br>
+	
+	<!-- (event): untuk panggil function preventDefault()-->
+	<button id="submit" onclick="hitung(event)">Submit!</button> 
+
+
+	<script type="text/javascript">
+		function myFunction(){
+			document.getElementById("labelNama").style.color = "red";
+		}
+		//Event
+		function hitung(){
+			var nama = document.getElementById("nama").value;
+			if (nama.length <= 10){
+				document.getElementById("notif").innerHTML = "Nama harus dari 10 karakter";
+				document.getElementById("notif").style.color = "red";
+			}else{
+				document.getElementById("notif").innerHTML = "Nama sudah OK";
+				document.getElementById("notif").style.color = "green";
+			}
+			//untuk menampilkan event agar tidak kedap kedip saat diklik button
+			event.preventDefault();
+		}
+
+	</script>
+</form>
+
+
+</body>
+</html>
