@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+	
+</head>
+<body>
+<!-- NAVIGASI -->
+<!-- cara penulisan dengan satu penulisan di folder navigation -->
+<%-include('partials/navigation') %>
+
+<h1>Profile</h1>
+<p>Welcome back <%= data.name%>, Yeay!</p>
+<p>
+	I'm working on
+	<!-- perulangan untuk menangkap array my jobs -->
+	<% jobs.forEach((item) =>{ %>
+		| <%= item %>
+	<% }) %>
+</p>
+
+
+
+
+<%-include('partials/footer') %>
+
+</body>
+</html>
