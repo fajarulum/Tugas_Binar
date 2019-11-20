@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Articles</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+</head>
+<body>
+
+<%-include('../partials/navigation') %>
+
+<h1>Show Articles</h1>
+<br>
+<table border="1" cellspacing="5" cellpadding="10">
+<th>ID</th>
+<th>Title</th>
+<th>Author</th>
+<th>Description</th>
+
+	<tr>
+	<td><%= data._id %></td>
+	<td><%= data.title %></td>	
+	<td><%= data.author %></td>
+	<td><%= data.description %></td>
+	</tr>
+</table>
+
+
+<%-include('../partials/footer') %>
+</body>
+</html>

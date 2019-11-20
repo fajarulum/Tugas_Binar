@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Articles</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+</head>
+<body>
+
+<%-include('../partials/navigation') %>
+
+<h1>List Articles</h1>
+<h2><a href="http://localhost:3000/articles/create">Creat</a></h2>
+<br>
+<table border="1" cellspacing="5" cellpadding="10">
+<th>No</th>
+<th>Title</th>
+<th>Author</th>
+<th>Description</th>
+<th>Opsi</th>
+<% data.forEach(function(item){ %>
+
+	<tr>
+	<!-- < --><!-- td><%= item._id %></td> -->
+	<td><%= data.indexOf(item) + 1 %></td>
+	<td><%= item.title %></td>	
+	<td><%= item.author %></td>
+	<td><%= item.description %></td>
+	<td>
+	<a href="http://localhost:3000/articles/show/<%= item._id %>">
+	<button type="button" class="btn btn-info">Show</button>
+	</a>
+	<a href="http://localhost:3000/articles/delete/<%= item._id %>">
+	<button type="button" class="btn btn-primary">Delete</button>
+	</a>
+	<a href="http://localhost:3000/articles/update/<%= item._id %>">
+	<button type="button" class="btn btn-success">Update</button>
+	</a>
+	</td>
+	</tr>
+
+
+<% }) %>
+</table>
+
+
+
+
+<%-include('../partials/footer') %>
+</body>
+</html>
